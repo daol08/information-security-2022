@@ -205,3 +205,13 @@ for ch in plaintext:
 
     print(encoded_ch, end='')
 
+"""
+ILOVEYOU
+->
+A
+I II III
+A B C
+BQ
+->
+ADWBIASY
+"""
