@@ -149,8 +149,8 @@ def pass_ukw(input):
 def rotate_wheels():
     global  rotor3_left, rotor2_left, rotor1_left
     #실행 시 rotor3 부터 하나씩 올라가야함 + norch 부분이 걸리면 다음 로터도 회전
-    if SETTINGS["WHEEL_POS"][2] == SETTINGS["WHEELS"][2]['turn']:
-        if SETTINGS["WHEEL_POS"][1] == SETTINGS["WHEELS"][1]['turn']:
+    if SETTINGS["WHEEL_POS"][2] == SETTINGS["WHEELS"][2]["turn"]:
+        if SETTINGS["WHEEL_POS"][1] == SETTINGS["WHEELS"][1]["turn"]:
             SETTINGS["WHEEL_POS"][1] += 1
             rotor2_left = positioning(SETTINGS["WHEEL_POS"][2])
             SETTINGS["WHEEL_POS"][2] += 1
@@ -158,14 +158,13 @@ def rotate_wheels():
         else:
             SETTINGS["WHEEL_POS"][1] += 1
             rotor2_left = positioning(SETTINGS["WHEEL_POS"][1])
-    if SETTINGS["WHEEL_POS"][1] == SETTINGS["WHEELS"][1]['turn']:
+    if SETTINGS["WHEEL_POS"][1] == SETTINGS["WHEELS"][1]["turn"]:
         SETTINGS["WHEEL_POS"][0] += 1
         rotor1_left = positioning(SETTINGS["WHEEL_POS"][0])
     else:
         SETTINGS["WHEEL_POS"][2] += 1
         rotor3_left = positioning(SETTINGS["WHEEL_POS"][2])
 
-    pass
 
 plaintext = input("Plaintext to Encode: ")
 ukw_select = input("Set Reflector (A, B, C): ")
